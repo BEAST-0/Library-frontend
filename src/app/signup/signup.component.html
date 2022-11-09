@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg bg-warning">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="logo"
+      ><img src="https://img.icons8.com/color/50/null/storytelling.png"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <div class="nav-item"></div>
+        <div class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLinkActive=""
+            >Signup</a
+          >
+        </div>
+        <div class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </div>
+        <!-- <a class="nav-link disabled">Disabled</a> -->
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- navbar ends here -->
+<div class="signupb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-7 offset-lg-3 my-5">
+        <form
+          [formGroup]="signupForm"
+          class="form-control py-2 my-5"
+          (ngSubmit)="signUp()"
+        >
+          <h3 class="pt-3 px-5"><b>SIGN UP</b></h3>
+          <div class="form-group pt-3">
+            <label for="name">Enter your Name</label>
+            <div class="input-field">
+              <input
+                type="text"
+                placeholder="Name"
+                class="form-control"
+                formControlName="name"
+              />
+            </div>
+          </div>
+          <div class="form-group pt-3">
+            <label for="email">Enter your Email</label>
+            <div class="input-field">
+              <span class="fa fa-envelope p-2"></span>
+              <input
+                type="email"
+                placeholder="Email"
+                class="form-control"
+                formControlName="email"
+              />
+            </div>
+          </div>
+          <div class="form-group pt-3">
+            <label for="password">Enter your Password</label>
+            <div class="input-field">
+              <span class="fa fa-lock p-2"></span>
+              <input
+                type="password"
+                placeholder="Password"
+                class="form-control"
+                formControlName="password"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success btn btn-block mt-4">
+            SUBMIT
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- form ends -->

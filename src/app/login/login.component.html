@@ -1,0 +1,85 @@
+<!-- navbar starts here -->
+
+<nav class="navbar navbar-expand-lg bg-warning">
+  <div class="container-fluid">
+    <a class="navbar-brand" id="logo"
+      ><img src="https://img.icons8.com/color/50/null/storytelling.png"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"></li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/login"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- navbar ends here -->
+<div class="loginb">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-7 offset-lg-3 my-5">
+        <form
+          [formGroup]="loginForm"
+          class="form-control pt-2 px-2 my-5"
+          (ngSubmit)="logIn()"
+        >
+          <div class="form-group pt-3">
+            <h3 class="pt-3 px-5"><b>Login</b></h3>
+            <div class="form-group pt-3">
+              <label for="email">Enter your Email</label>
+              <div class="input-field">
+                <span class="fa fa-envelope p-2"></span>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="form-control"
+                  formControlName="email"
+                />
+              </div>
+            </div>
+            <div class="form-group pt-3">
+              <label for="password">Enter your Password</label>
+              <div class="input-field">
+                <span class="fa fa-lock p-2"></span>
+                <input
+                  type="password"
+                  placeholder="Password"
+                  class="form-control"
+                  formControlName="password"
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-success btn btn-block mt-4">
+              SUBMIT
+            </button>
+            <div class="text-center pt-4 text-muted" id="forget">
+              Dont have an Account?
+              <a id="forget" type="button" routerLink="">SignUp</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
